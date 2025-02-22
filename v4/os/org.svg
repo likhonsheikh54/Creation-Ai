@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2b0a3d"/>
+      <stop offset="100%" style="stop-color:#571089"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main background -->
+  <rect width="800" height="400" fill="url(#grad)"/>
+
+  <!-- Main text section -->
+  <text x="400" y="200" font-family="Arial Black, sans-serif" font-size="48" fill="#ffffff" text-anchor="middle">
+    CREATION
+  </text>
+
+  <!-- Powered by section -->
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">
+    Powered by VΔOS
+  </text>
+
+  <!-- Footer text -->
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" opacity="0.7">
+    SQUAD GAMING
+  </text>
+
+  <!-- Decorative elements -->
+  <circle cx="200" cy="340" r="5" fill="#ff2b6e"/>
+  <circle cx="600" cy="340" r="5" fill="#00fff2"/>
+</svg>

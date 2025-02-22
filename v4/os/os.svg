@@ -1,0 +1,81 @@
+export default function CreativeVaosSvg() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#7928CA" />
+          <stop offset="100%" stopColor="#FF0080" />
+        </linearGradient>
+        <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#00DFD8" />
+          <stop offset="100%" stopColor="#007CF0" />
+        </linearGradient>
+      </defs>
+
+      {/* Abstract geometric shapes */}
+      <path d="M400,50 L700,200 L400,350 L100,200 Z" fill="none" stroke="url(#grad1)" strokeWidth="2">
+        <animate
+          attributeName="d"
+          dur="10s"
+          repeatCount="indefinite"
+          values="M400,50 L700,200 L400,350 L100,200 Z;
+                  M400,100 L650,200 L400,300 L150,200 Z;
+                  M400,50 L700,200 L400,350 L100,200 Z"
+        />
+      </path>
+
+      <path d="M400,100 L600,200 L400,300 L200,200 Z" fill="none" stroke="url(#grad2)" strokeWidth="2">
+        <animate
+          attributeName="d"
+          dur="15s"
+          repeatCount="indefinite"
+          values="M400,100 L600,200 L400,300 L200,200 Z;
+                  M400,150 L550,200 L400,250 L250,200 Z;
+                  M400,100 L600,200 L400,300 L200,200 Z"
+        />
+      </path>
+
+      {/* Delta symbol */}
+      <path d="M400,120 L460,220 L340,220 Z" fill="url(#grad1)">
+        <animate
+          attributeName="d"
+          dur="8s"
+          repeatCount="indefinite"
+          values="M400,120 L460,220 L340,220 Z;
+                  M400,140 L440,200 L360,200 Z;
+                  M400,120 L460,220 L340,220 Z"
+        />
+      </path>
+
+      {/* Main text */}
+      <text x="400" y="270" fontFamily="Arial Black, sans-serif" fontSize="48" fill="#ffffff" textAnchor="middle">
+        CREATION
+        <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
+      </text>
+
+      {/* Subtitle */}
+      <text x="400" y="310" fontFamily="Arial, sans-serif" fontSize="24" fill="#ffffff" textAnchor="middle">
+        Powered by VΔOS
+      </text>
+
+      {/* Decorative elements */}
+      <circle cx="200" cy="340" r="5" fill="#FF0080">
+        <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="600" cy="340" r="5" fill="#00DFD8">
+        <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite" />
+      </circle>
+
+      {/* Connecting lines */}
+      <path d="M205,340 Q400,330 595,340" fill="none" stroke="#ffffff" strokeWidth="1" opacity="0.5">
+        <animate
+          attributeName="d"
+          values="M205,340 Q400,330 595,340; M205,340 Q400,350 595,340; M205,340 Q400,330 595,340"
+          dur="6s"
+          repeatCount="indefinite"
+        />
+      </path>
+    </svg>
+  )
+}
+

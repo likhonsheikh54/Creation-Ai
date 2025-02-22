@@ -13,25 +13,37 @@ export default function CreativeVaosSvg() {
       </defs>
 
       {/* Abstract geometric shapes */}
-      <path d="M400,50 L700,200 L400,350 L100,200 Z" fill="none" stroke="url(#grad1)" strokeWidth="2">
+      <path
+        d="M400,50 L700,200 L400,350 L100,200 Z"
+        fill="none"
+        stroke="url(#grad1)"
+        strokeWidth="2"
+      >
         <animate
           attributeName="d"
           dur="10s"
           repeatCount="indefinite"
-          values="M400,50 L700,200 L400,350 L100,200 Z;
-                  M400,100 L650,200 L400,300 L150,200 Z;
-                  M400,50 L700,200 L400,350 L100,200 Z"
+          values="
+            M400,50 L700,200 L400,350 L100,200 Z;
+            M400,100 L650,200 L400,300 L150,200 Z;
+            M400,50 L700,200 L400,350 L100,200 Z"
         />
       </path>
 
-      <path d="M400,100 L600,200 L400,300 L200,200 Z" fill="none" stroke="url(#grad2)" strokeWidth="2">
+      <path
+        d="M400,100 L600,200 L400,300 L200,200 Z"
+        fill="none"
+        stroke="url(#grad2)"
+        strokeWidth="2"
+      >
         <animate
           attributeName="d"
           dur="15s"
           repeatCount="indefinite"
-          values="M400,100 L600,200 L400,300 L200,200 Z;
-                  M400,150 L550,200 L400,250 L250,200 Z;
-                  M400,100 L600,200 L400,300 L200,200 Z"
+          values="
+            M400,100 L600,200 L400,300 L200,200 Z;
+            M400,150 L550,200 L400,250 L250,200 Z;
+            M400,100 L600,200 L400,300 L200,200 Z"
         />
       </path>
 
@@ -41,20 +53,35 @@ export default function CreativeVaosSvg() {
           attributeName="d"
           dur="8s"
           repeatCount="indefinite"
-          values="M400,120 L460,220 L340,220 Z;
-                  M400,140 L440,200 L360,200 Z;
-                  M400,120 L460,220 L340,220 Z"
+          values="
+            M400,120 L460,220 L340,220 Z;
+            M400,140 L440,200 L360,200 Z;
+            M400,120 L460,220 L340,220 Z"
         />
       </path>
 
       {/* Main text */}
-      <text x="400" y="270" fontFamily="Arial Black, sans-serif" fontSize="48" fill="#ffffff" textAnchor="middle">
+      <text
+        x="400"
+        y="270"
+        fontFamily="Arial Black, sans-serif"
+        fontSize="48"
+        fill="#ffffff"
+        textAnchor="middle"
+      >
         CREATION
         <animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
       </text>
 
       {/* Subtitle */}
-      <text x="400" y="310" fontFamily="Arial, sans-serif" fontSize="24" fill="#ffffff" textAnchor="middle">
+      <text
+        x="400"
+        y="310"
+        fontFamily="Arial, sans-serif"
+        fontSize="24"
+        fill="#ffffff"
+        textAnchor="middle"
+      >
         Powered by VΔOS
       </text>
 
@@ -67,15 +94,23 @@ export default function CreativeVaosSvg() {
       </circle>
 
       {/* Connecting lines */}
-      <path d="M205,340 Q400,330 595,340" fill="none" stroke="#ffffff" strokeWidth="1" opacity="0.5">
+      <path
+        d="M205,340 Q400,330 595,340"
+        fill="none"
+        stroke="#ffffff"
+        strokeWidth="1"
+        opacity="0.5"
+      >
         <animate
           attributeName="d"
-          values="M205,340 Q400,330 595,340; M205,340 Q400,350 595,340; M205,340 Q400,330 595,340"
+          values="
+            M205,340 Q400,330 595,340;
+            M205,340 Q400,350 595,340;
+            M205,340 Q400,330 595,340"
           dur="6s"
           repeatCount="indefinite"
         />
       </path>
     </svg>
-  )
+  );
 }
-

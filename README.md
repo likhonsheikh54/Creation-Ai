@@ -1,272 +1,246 @@
-# Creation AI Platform
+<div align="center">
+  <img src="https://raw.githubusercontent.com/v4os/creation-ai/main/public/logo.svg" width="200" height="200" alt="Creation AI Logo"/>
+  
+  # Creation AI Platform
+  
+  [![Next.js](https://img.shields.io/badge/Next.js-14.1.0-black)](https://nextjs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.3.3-blue)](https://www.typescriptlang.org/)
+  [![Turborepo](https://img.shields.io/badge/Turborepo-latest-green)](https://turbo.build/)
+  [![CI/CD](https://github.com/v4os/creation-ai/actions/workflows/ci.yml/badge.svg)](https://github.com/v4os/creation-ai/actions)
 
-🌟 **Vision**
-
-Creation AI is a revolutionary platform designed to empower developers with cutting-edge AI tools for front-end development. By integrating seamlessly with popular frameworks and offering unmatched flexibility, Creation AI aims to redefine the development workflow, making it faster, smarter, and more efficient.
-
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-orange)
-![Coverage](https://img.shields.io/badge/coverage-95%25-yellow)
-
-🎯 **Why Creation AI?**
-
-Creation AI stands out by combining the power of multiple AI models and frameworks, offering:
-- **Advanced AI Integration**: Leverages DeepSeek, HuggingFace, and Claude Anthropic for enhanced code generation and optimization.
-- **Framework Flexibility**: Works seamlessly with React, Vue, Angular, Svelte, and more.
-- **Community-Driven Development**: Open-source with active contributions from the global developer community.
-- **Enterprise-Grade Features**: Robust security, collaboration tools, and analytics for teams of all sizes.
-
-🚀 **Core Features**
-
-1. **AI-Powered Development**
-   - **Component Generation**: Generate components from descriptions and images.
-   - **Multi-Framework Support**: React, Vue, Angular, Svelte.
-   - **Customization Options**: Tailored development experiences.
-   - **Advanced Code Completion**: Context-aware suggestions and performance optimization.
-   - **Security Checks**: Integrated security scans for code vulnerabilities.
-   - **Design Intelligence**: Brand guidelines compliance, responsive layouts, and accessibility features.
-
-2. **Advanced Playground**
-   - **Interactive Development Environment**: Real-time component preview and multi-device testing.
-   - **Performance Metrics Tracking**: Monitor and optimize performance.
-   - **Accessibility Checker**: Ensure WCAG 2.1 compliance.
-   - **AI-Powered Pair Programming**: Context-aware code suggestions and architecture recommendations.
-   - **Technical Debt Detection**: Identify and address technical debt early.
-
-3. **Enterprise Features**
-   - **Team Collaboration**: Tools for seamless teamwork.
-   - **Design System Management**: Centralized design systems.
-   - **Version Control Integration**: Seamless integration with Git.
-   - **Role-Based Access Control**: Enhanced security with granular access controls.
-
-🛠️ **Technical Architecture**
-
-**Frontend Stack**
-```typescript
-import { AppRouter } from './AppRouter';
-import { CreateComponent, Playground, AIAssistant } from '@creation/ui';
-import { useCache, useLazyLoad } from '@creation/performance';
-```
-
-**AI Integration Layer**
-```typescript
-import { HuggingFace, DeepSeek, Claude } from '@creation/ai';
-```
-
-**Development Workflow**
-```mermaid
-graph TD
-    A[User Input] --> B{AI Processing}
-    B --> C[Component Generation]
-    B --> D[Code Completion]
-    B --> E[Design Optimization]
-    C --> F[Preview]
-    D --> F
-    E --> F
-    F --> G[Deployment]
-    G --> H[Analytics]
-    H --> I[Feedback Loop]
-```
-
-🌐 **Platform Architecture**
-
-**Backend Services**
-```typescript
-{
-  apiGateway: "AWS API Gateway",
-  authentication: "Auth0",
-  aiProcessing: "DeepSeek & HuggingFace",
-  database: "PostgreSQL",
-  storage: "AWS S3"
-}
-```
-
-**Microservices**
-```typescript
-{
-  aiService: true,
-  componentGenerator: true,
-  codeAnalyzer: true,
-  designOptimizer: true
-}
-```
-
-🎨 **UI/UX Features**
-
-**Modern Design System**
-- **Fluid Typography**: Adaptive text sizing for all devices.
-- **Dynamic Theming**: Customizable color palettes and themes.
-- **Motion Design**: Smooth animations and transitions.
-- **Accessibility**: WCAG 2.1 compliance by default.
-
-**Component Library**
-- **Atomic Design**: Build components from small to large.
-- **Composition API**: Combine components seamlessly.
-- **Theme Engine**: Customizable styling across your project.
-
-🤝 **Partnerships & Integrations**
-
-**AI Partners**
-<div style="display: flex; justify-content: center; gap: 20px; margin: 20px 0;">
-  <div style="text-align: center;">
-    <a href="https://beta.deeplang.io">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/DeepSeek_logo.svg/1024px-DeepSeek_logo.svg.png" width="100" alt="DeepSeek AI">
-    </a>
-    <p>Advanced Code Generation</p>
-  </div>
-  <div style="text-align: center;">
-    <a href="https://huggingface.co">
-      <img src="https://cdn-lfs.hf.co/repos/96/a2/96a2c8468c1546e660ac2609e49404b8588fcf5a748761fa72c154b2836b4c83/42378b786aa85e6103abbd2ee24e56672467d562ecf884eb51cefe3a68971087?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27hf-logo-with-title.png%3B+filename%3D"hf-logo-with-title.png"%3B&response-content-type=image%2Fpng&Expires=1740231186&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0MDIzMTE4Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5oZi5jby9yZXBvcy85Ni9hMi85NmEyYzg0NjhjMTU0NmU2NjBhYzI2MDllNDk0MDRiODU4OGZjZjVhNzQ4NzYxZmE3MmMxNTRiMjgzNmI0YzgzLzQyMzc4Yjc4NmFhODVlNjEwM2FiYmQyZWUyNGU1NjY3MjQ2N2Q1NjJlY2Y4ODRlYjUxY2VmZTNhNjg5NzEwODc~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=i2xzgR3UPhXlgBtWMJOfdn31iWrDcm-LefSEzcrz2dqpw9-DKQl-WbvD-xptDeyMdiCtoRbtvNPxy7ffv4Q8wQg6WliSmC5FzHqQKVws7Lm3XOCBFryLTdIq8fbCx1C~SpGenIrvD6aTXov1GrsA9zHAmbyLmhIdpgXRbf5SmEu3InbRClsDUjd3aNw-4VuxZT6k7-q45xjTDChylxapBkGYUXCgqAsa4ZK1U4GSkkr9iJHepjFGiwZHkFDWN89CSS~konMp2Wy1fsVrR0UbbsCIkUePaapoY64dSBrm4H76hg8rkK3K7fIxADXeRHsCOOMcavgucA8U89j3xlNH~Q__&Key-Pair-Id=K3RPWS32NSSJCE" width="100" alt="HuggingFace">
-    </a>
-    <p>State-of-the-art ML Models</p>
-  </div>
-  <div style="text-align: center;">
-    <a href="https://www.cohere.ai">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ69idonX0T5QWdNYG8Vxu5BJ5rI6HWhfKdqMFLoGvBXuYie94VqhnV4H-&s=10" width="100" alt="Cohere AI">
-    </a>
-    <p>Advanced Language Models</p>
-  </div>
-  <div style="text-align: center;">
-    <a href="https://sambanova.ai">
-      <img src="https://sambanova.ai/hubfs/sambanova-logo-black.png" width="100" alt="SambaNova">
-    </a>
-    <p>Fastest DeepSeek-R1 671B Model</p>
-  </div>
+  <p align="center">
+    <a href="https://creation.v4os.org">Website</a>
+    ·
+    <a href="https://docs.creation.v4os.org">Documentation</a>
+    ·
+    <a href="https://github.com/v4os/creation-ai/issues">Issues</a>
+  </p>
 </div>
 
-📚 **Documentation**
+## 📖 Overview
 
-**Getting Started**
-1. **Installation**:
-   ```bash
-   git clone https://github.com/v4os/creation-ai.git
-   cd creation-ai
-   pnpm install
-   ```
-2. **Development**:
-   ```bash
-   pnpm dev
-   ```
-3. **Building**:
-   ```bash
-   pnpm build
-   ```
+Creation AI is a next-generation AI-powered development platform that combines the capabilities of multiple AI models (DeepSeek, HuggingFace, Cohere) to enhance the developer experience.
 
-**API Reference**
-- **Component Generation**: [Documentation](https://docs.creation.v4os.org/component-generation)
-- **Code Completion**: [Documentation](https://docs.creation.v4os.org/code-completion)
+### Key Features
 
-🎯 **Roadmap**
+- 🤖 **Multi-Model AI Integration**
+- 🚀 **Advanced Code Generation**
+- 🎨 **Intelligent UI/UX Creation**
+- 📊 **Performance Analytics**
+- 🔒 **Enterprise-Grade Security**
 
-**Q2 2024**
-- Advanced component templates.
-- Multi-language support.
-- AI-assisted debugging and testing.
+## 🛠 Tech Stack
 
-**Q3 2024**
-- Full-stack AI support.
-- Server-side rendering optimization.
-- Cloud deployment integrations.
+- **Frontend**: Next.js 14, React 18, TailwindCSS
+- **Backend**: Node.js, tRPC, Prisma
+- **AI Models**: HuggingFace, DeepSeek, Cohere
+- **Infrastructure**: Vercel, PlanetScale
+- **Tools**: Turborepo, pnpm
 
-**Q4 2024**
-- Extended enterprise features.
-- Global developer community platform.
-- AI-driven performance analytics.
+## 🚀 Quick Start
 
-🤝 **Contributing**
+```bash
+# Clone the repository
+git clone https://github.com/v4os/creation-ai.git
 
-Contributions are welcome! Check out our [Contributing Guidelines](CONTRIBUTING.md) for details on how to get started.
+# Install dependencies
+pnpm install
 
-📁 **Project Structure**
+# Set up environment variables
+cp .env.example .env.local
+
+# Start development server
+pnpm dev
+```
+
+## 📦 Project Structure
 
 ```
 creation-ai/
 ├── apps/
-│   ├── web/          # Frontend application
-│   ├── api/          # Backend services
-│   ├── studio/       # Development environment
-│   └── docs/         # Documentation
+│   ├── web/                # Next.js frontend
+│   ├── docs/               # Documentation site
+│   └── api/                # Backend API
 ├── packages/
-│   ├── ai/           # AI service integration
-│   ├── ui/           # UI components
-│   └── core/         # Core utilities
-└── infrastructure/   # Infrastructure as code
+│   ├── ui/                 # Shared UI components
+│   ├── ai/                 # AI service integrations
+│   ├── config/            # Shared configuration
+│   └── tsconfig/         # TypeScript configurations
+└── tooling/
+    ├── eslint/            # ESLint configurations
+    └── prettier/          # Prettier configurations
 ```
 
-🤝 **Leadership**
+## 🔧 Configuration
 
-<div align="center">
-  <div style="display: flex; align-items: center; gap: 20px; margin: 20px 0">
-    <img src="https://avatars.githubusercontent.com/u/196006658?s=400&u=69b514dd63c5c7ae0ece0b5209cd0454553d356e&v=4"
-         style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #0366d6"
-         alt="Likhon Sheikh">
-    <div>
-      <h3>Likhon Sheikh</h3>
-      <p>CEO & Founder of DELTA @ V4OS</p>
-      <p style="color: #0366d6; margin-top: 10px">
-        📧 <a href="mailto:likhon@delta.org">likhon@delta.org</a> |
-        📧 <a href="mailto:sheikh@v4os.org">sheikh@v4os.org</a> |
-        🌐 <a href="https://likhonsheikh.com">likhonsheikh.com</a> |
-        <a href="https://github.com/likhonsheikh54">
-          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-               style="width: 20px; height: 20px; vertical-align: middle">
-          @likhonsheikh54
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
+### Next.js Configuration
 
-📜 **License**
+The project uses Next.js with App Router and Server Components. Key configurations:
+
+```typescript name=apps/web/next.config.mjs
+import { withTurbo } from '@vercel/turbo';
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+    optimizeCss: true,
+    turbo: {
+      loaders: {
+        '.svg': ['@svgr/webpack'],
+      },
+    },
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.creation.v4os.org',
+      },
+    ],
+  },
+  // Recommended Vercel configuration
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+};
+
+export default withTurbo(nextConfig);
+```
+
+### Turborepo Configuration
+
+```json name=turbo.json
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}
+```
+
+### Environment Variables
+
+Create `.env.example`:
+
+```plaintext name=.env.example
+# App
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+# Authentication
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-secret-here
+
+# Database
+DATABASE_URL=mysql://user:pass@host/db
+
+# AI Services
+HF_API_KEY=your-huggingface-key
+COHERE_API_KEY=your-cohere-key
+DEEPSEEK_API_KEY=your-deepseek-key
+```
+
+## 🔍 AI Service Integration
+
+### HuggingFace Setup
+
+```typescript name=packages/ai/src/services/huggingface.ts
+import { HfInference } from '@huggingface/inference';
+import { Cache } from '@creation/core/cache';
+
+export class HuggingFaceService {
+  private client: HfInference;
+  private cache: Cache;
+
+  constructor() {
+    this.client = new HfInference(process.env.HF_API_KEY);
+    this.cache = new Cache();
+  }
+
+  async generateCode(prompt: string) {
+    const cacheKey = `code_${prompt}`;
+    const cached = await this.cache.get(cacheKey);
+
+    if (cached) return cached;
+
+    const response = await this.client.textGeneration({
+      model: 'bigcode/starcoder',
+      inputs: prompt,
+      parameters: {
+        max_new_tokens: 1024,
+        temperature: 0.7,
+      }
+    });
+
+    await this.cache.set(cacheKey, response);
+    return response;
+  }
+}
+```
+
+## 📈 Performance Optimization
+
+- **Edge Runtime**: Deployed on Vercel's Edge Network
+- **Automatic Image Optimization**
+- **Static Page Generation**
+- **Incremental Static Regeneration**
+
+## 🚀 Deployment
+
+The project is configured for deployment on Vercel:
+
+```json name=vercel.json
+{
+  "framework": "nextjs",
+  "buildCommand": "cd ../.. && pnpm turbo run build --filter=web...",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./",
+  "installCommand": "pnpm install",
+  "regions": ["iad1", "sfo1"],
+  "crons": [
+    {
+      "path": "/api/cron/cache-warmup",
+      "schedule": "0 0 * * *"
+    }
+  ]
+}
+```
+
+## 📚 Documentation
+
+Detailed documentation is available at [docs.creation.v4os.org](https://docs.creation.v4os.org), including:
+
+- Getting Started Guide
+- API Reference
+- Component Documentation
+- AI Model Integration Guide
+- Performance Optimization Tips
+
+## 🤝 Contributing
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting a Pull Request.
+
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-🌐 **Links**
+---
 
-- **Homepage**: [creation.v4os.org](https://creation.v4os.org)
-- **Documentation**: [docs.creation.v4os.org](https://docs.creation.v4os.org)
-- **GitHub**: [github.com/v4os/creation-ai](https://github.com/v4os/creation-ai)
-- **Community**: [discord.gg/creation-ai](https://discord.gg/creation-ai)
-
-**Acknowledgments**
-
-- **DeepSeek AI**: For providing advanced code generation and optimization.
-- **HuggingFace**: For state-of-the-art machine learning models.
-- **GitHub Copilot**: For seamless integration and collaboration.
-- **Claude Anthropic**: For cutting-edge AI language models.
-- **SambaNova**: For the fastest DeepSeek-R1 671B model with highest efficiency.
-
-*Made with ❤️ by VΔOS. Building the future of AI-powered web development.*
-
-**HyperWrite: Ready to put AI to work?**
-
-Creation AI is powered by GitHub and Claude Anthropic, offering the best AI-driven development experience. With advanced features like real-time previews, multi-device testing, and performance analytics, Creation AI stands out as the ultimate tool for modern web development.
-
-**Why Creation AI is Better:**
-- **Advanced AI Models**: Leverages the best AI models from DeepSeek and Cohere for unmatched code generation and optimization.
-- **Flexible Framework Support**: Works with all major frameworks, providing a seamless development experience.
-- **Community-Driven**: Open-source with a vibrant community contributing to its growth.
-- **Enterprise-Ready**: Robust security and collaboration features for teams of all sizes.
-
-**Emulations and Descriptions:**
-- **DeepSeek**: Known for its advanced code generation capabilities, DeepSeek integrates seamlessly with Creation AI to provide high-quality code suggestions and optimizations.
-- **Cohere**: Offers advanced language models that enhance the natural language processing capabilities of Creation AI, making it easier to generate human-like text and code.
-
-**Playgrounds and Structure:**
-- **Interactive Playground**: A dynamic environment for real-time component preview and testing.
-- **Structured Architecture**: A well-organized project structure that follows best practices for modern web development.
-
-**Partnerships:**
-- [DeepSeek AI](https://beta.deeplang.io)
-- [HuggingFace](https://huggingface.co)
-- [Cohere AI](https://www.cohere.ai)
-- [GitHub Copilot](https://github.com/features/copilot)
-- [Claude Anthropic](https://www.anthropic.com)
-- [SambaNova](https://sambanova.ai)
-
-**Open Source Contributions:**
-- [Vercel](https://vercel.com)
-- [WebCatalog](https://webcatalog.io)
-
-*Join us in building the future of AI-powered web development with Creation AI!*
+<div align="center">
+  Made with ❤️ by VΔOS • <a href="https://v4os.org">v4os.org</a>
+</div>

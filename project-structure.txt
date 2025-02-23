@@ -1,0 +1,29 @@
+creation-ai/
+├── apps/
+│   ├── web/                    # Next.js frontend application
+│   │   ├── app/
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── providers.tsx
+│   │   │   └── global.css
+│   │   ├── components/
+│   │   ├── features/
+│   │   └── styles/
+│   ├── studio/                 # Development environment
+│   │   ├── playground/
+│   │   └── tools/
+│   └── api/                    # Backend services
+│       ├── ai/
+│       └── core/
+├── packages/
+│   ├── ui/
+│   ├── ai/
+│   └── core/
+├── infrastructure/
+│   ├── terraform/
+│   └── kubernetes/
+├── .github/
+│   └── workflows/
+└── config/
+    ├── huggingface/
+    └── deployment/
